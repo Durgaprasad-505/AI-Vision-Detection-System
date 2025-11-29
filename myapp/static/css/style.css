@@ -1,0 +1,153 @@
+/* GLOBAL */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: radial-gradient(circle at top, #091224, #000);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 30px;
+}
+
+.app-title {
+    font-size: 2rem;
+    color: #00eaff;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(0, 234, 255, 0.6);
+}
+
+/* GRID LAYOUT */
+.content-grid {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 60px;
+}
+
+/* PANELS */
+.panel {
+    text-align: center;
+}
+
+.panel-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #00eaff;
+}
+
+/* IMAGE FRAMES */
+.image-frame {
+    width: 640px;
+    height: 640px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed #00eaff;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.image-frame:hover {
+    box-shadow: 0 0 20px #00eaff;
+}
+
+.placeholder-text {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+}
+
+.image-display {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* BUTTON STYLES */
+.btn-select {
+    background: linear-gradient(90deg, #007bff, #00eaff);
+    color: #fff;
+    border: none;
+    padding: 12px 36px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+.btn-clear {
+    background: linear-gradient(90deg, #ff4b2b, #ff0000);
+    color: #fff;
+    border: none;
+    padding: 12px 36px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-clear:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.btn-select:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00eaff;
+}
+
+/* ACTION BUTTONS */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn-action {
+    padding: 12px 36px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.detect-btn {
+    background: linear-gradient(90deg, #00ff2a, rgb(0, 255, 42));
+}
+
+.download-btn {
+    background: linear-gradient(90deg, #ff007b, #ff00c8);
+}
+
+.btn-action:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+/* ----------- Date & Time Display ----------- */
+.datetime-display {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #00ffb3; /* nice neon green for visibility */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 179, 0.4);
+    z-index: 9999;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+}

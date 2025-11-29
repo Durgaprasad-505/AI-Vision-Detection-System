@@ -1,0 +1,53 @@
+Documentation: How to Run Django + YOLOv5 Application Using Docker
+
+This guide explains how to build and run a Django application that uses YOLOv5
+Ultralytics for image detection inside a Docker container.
+
+
+Make sure you have the following installed:
+
+1. Prerequisites
+Docker
+Check using:
+    docker --version
+    
+2. Project Structure
+
+Your Django project folder should look like this:
+myproject/
+│── manage.py
+│── Dockerfile
+│── app/ (your Django app)
+│── myproject/ (settings folder)
+│── requirements.txt (optional)
+
+3. Dockerfile Explanation
+
+Here is the Dockerfile being used:
+      Dockerfile
+  
+4.Build the Docker Image
+
+Navigate to your project directory:
+    cd /path/to/myproject
+    docker build -t my-django-yolov5 .    #Build the Docker image
+This downloads Python, installs all dependencies, and prepares YOLO + Django.
+
+5.Run the Docker Container
+
+Run your Django + YOLOv5 app:
+     docker run -p 8000:8000 my-django-yolov5
+     
+6. Access the Application
+
+Open a browser and go to:
+	http://127.0.0.1:8000
+
+
+
+
+
+
+
+
+

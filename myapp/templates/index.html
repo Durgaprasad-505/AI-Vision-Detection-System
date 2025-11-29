@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Vision Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+ <div id="datetime" class="datetime-display"></div>
+<div class="main-container text-center">
+    <h1 class="app-title mb-4">AI Vision Detection System</h1>
+    
+    <div class="content-grid">
+        <!-- Left: Upload Area -->
+        <div class="panel upload-panel">
+            <h3 class="panel-title">Input Image</h3>
+            <div class="image-frame">
+                <img id="previewImg" class="image-display" style="display:none;">
+                <div id="placeholder" class="placeholder-text">No Image Selected</div>
+            </div>
+            <div class="button-area mt-3 d-flex justify-content-center gap-3">
+    <div>
+        <label for="fileInput" class="btn-select">Select Image</label>
+        <input type="file" id="fileInput" accept="image/*" hidden>
+    </div>
+    <button id="clearBtn" class="btn-clear">Clear Image</button>
+</div>
+
+        </div>
+
+        <!-- Right: Result Area -->
+        <div class="panel result-panel">
+            <h3 class="panel-title">Result Window</h3>
+            <div class="image-frame position-relative">
+                <!-- Spinner (hidden initially) -->
+                <div id="loadingSpinner" class="spinner-border text-light" role="status" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+
+                <img id="resultImg" class="image-display" style="display:none;">
+                <div id="resultPlaceholder" class="placeholder-text">No Results Yet</div>
+            </div>
+
+            <div class="button-row mt-4">
+                <button id="detectBtn" class="btn-action detect-btn">Detect</button>
+                <button id="downloadBtn" class="btn-action download-btn">Download JSON</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

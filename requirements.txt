@@ -1,0 +1,11 @@
+Django>=4.2
+torch
+torchvision
+ultralytics>=8.0
+opencv-python
+numpy
+matplotlib
+pandas
+seaborn
+tqdm
+
